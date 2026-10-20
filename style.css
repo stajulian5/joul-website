@@ -179,3 +179,5 @@ details p{margin:12px 0 0;color:var(--mute);font-weight:600}
 .doc table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.95rem}
 .doc th,.doc td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 .doc th{font-weight:800}
+
+.eyebrow{display:inline-block;margin:0 0 22px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.38);font-weight:800;font-size:clamp(.85rem,2vw,1rem);letter-spacing:.01em;backdrop-filter:blur(6px)}
