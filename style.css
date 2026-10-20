@@ -191,3 +191,7 @@ details p{margin:12px 0 0;color:var(--mute);font-weight:600}
 .iphone::before{left:-3px;top:18%;height:7%;box-shadow:0 clamp(24px,5vw,52px) 0 #2a2c31,0 clamp(54px,10vw,104px) 0 #2a2c31}
 .iphone::after{right:-3px;top:27%;height:12%}
 .shots-note{margin-top:28px}
+
+.data-by{display:flex;align-items:center;justify-content:center;gap:8px;margin:20px 0 0}
+.data-by span{font-size:.62rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.data-by img{display:block;width:110px;height:auto}
