@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joul · Nutrition, in balance</title>
+<meta name="description" content="Joul connects to WHOOP, logs your food in seconds, and shows whether today is a deficit or a surplus.">
+<meta property="og:title" content="Joul · Nutrition, in balance">
+<meta property="og:description" content="Know what you burn. Know what you eat. A beautifully simple nutrition companion for WHOOP users.">
+<meta property="og:image" content="assets/app-icon.png">
+<link rel="icon" href="assets/app-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top" aria-label="Joul home"><img src="assets/logo-black.png" alt="Joul" class="logo logo-light"></a>
+  <nav aria-label="Primary">
+    <a href="#how">How it works</a>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a class="btn btn-small" href="mailto:hq@joul.health?subject=Joul%20waitlist">Join the waitlist</a>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-media" aria-hidden="true">
+      <!-- Drop a licensed clip at assets/hero.mp4 (and a still at assets/hero-poster.jpg). Until then the blue gradient shows. -->
+      <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
+        <source src="assets/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-shade"></div>
+    </div>
+    <div class="hero-inner">
+      <img src="assets/logo-black.png" alt="" class="hero-logo" aria-hidden="true">
+      <h1 id="hero-title">Know what you burn.<br>Know what you eat.</h1>
+      <p class="lede">Joul connects to WHOOP, logs your food in seconds, and shows whether today is a deficit or a surplus. No clutter. No database to wrestle.</p>
+      <div class="cta-row">
+        <a class="btn btn-light" href="mailto:hq@joul.health?subject=Joul%20waitlist">Join the waitlist</a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+      <p class="fine">iPhone · Works with WHOOP · Free to start</p>
+    </div>
+  </section>
+
+  <section class="stack" aria-label="What Joul does">
+    <p class="reveal">Burned.</p>
+    <p class="reveal">Eaten.</p>
+    <p class="reveal"><span class="accent">Balanced.</span></p>
+  </section>
+
+  <section class="intro wrap">
+    <h2 class="reveal">Your calories burned, <span class="blue">pulled in automatically.</span></h2>
+    <p class="reveal sub">WHOOP already knows how much energy you spend. Joul reads it, so you only log what you eat. The result is one clear number for the day, and a calendar that shows the pattern.</p>
+  </section>
+
+  <section class="showcase" aria-label="The app">
+    <div class="wrap phones">
+      <!-- Today -->
+      <figure class="phone p1 reveal">
+        <div class="screen">
+          <div class="s-title"><span>Today's</span><img src="assets/logo-blue.png" alt="Joul"></div>
+          <div class="s-date">Tuesday, 20 October</div>
+          <div class="s-card">
+            <div class="s-row s-mute"><span>Today so far</span><span class="chip">Provisional</span></div>
+            <div class="s-big">−420 <small>kcal</small></div>
+            <div class="s-state">↓ Estimated deficit</div>
+            <div class="s-bar"><i style="width:68%"></i></div>
+            <div class="s-row"><span class="s-mute">Eaten</span><span class="s-mute">WHOOP burned</span></div>
+            <div class="s-row s-strong"><span>2,080 kcal</span><span>2,500 kcal</span></div>
+          </div>
+          <div class="s-card">
+            <div class="s-row"><b>Protein</b><span class="s-mute">94 / 140 g</span></div>
+            <div class="s-bar thin"><i class="prot" style="width:67%"></i></div>
+          </div>
+          <div class="s-card">
+            <div class="s-row"><b>Breakfast</b><span class="s-mute">409 kcal</span></div>
+            <div class="s-food"><span class="em">🥚</span>Eggs, 2 pieces<em>155</em></div>
+            <div class="s-food"><span class="em">🍞</span>Toast, 2 slices<em>159</em></div>
+            <div class="s-food"><span class="em">🍎</span>Apple, 1 piece<em>95</em></div>
+          </div>
+        </div>
+      </figure>
+
+      <!-- Add food -->
+      <figure class="phone p2 reveal">
+        <div class="screen">
+          <div class="s-nav"><span class="blue">Cancel</span><b>Add Food</b><span></span></div>
+          <div class="s-seg"><i class="on">Type</i><i>Photo</i></div>
+          <div class="s-input">2 eggs, toast and an apple</div>
+          <div class="s-card list">
+            <div class="s-food"><span class="em">🥚</span><div><b>Eggs</b><small>2 pieces · 100 g</small></div><em>155 kcal</em></div>
+            <div class="s-food"><span class="em">🍞</span><div><b>Toast</b><small>2 slices · 60 g</small></div><em>159 kcal</em></div>
+            <div class="s-food"><span class="em">🍎</span><div><b>Apple</b><small>1 piece · 182 g</small></div><em>95 kcal</em></div>
+          </div>
+          <div class="s-note">Tap any item to adjust its portion.</div>
+          <div class="s-save">409 kcal · 19 g protein<span>Save</span></div>
+        </div>
+      </figure>
+
+      <!-- Calendar -->
+      <figure class="phone p3 reveal">
+        <div class="screen">
+          <div class="s-title small"><span>Your</span><img src="assets/logo-blue.png" alt="Joul"><span>, this month</span></div>
+          <div class="s-card">
+            <div class="s-row"><b>October 2026</b><span class="s-mute">‹ ›</span></div>
+            <div class="cal" id="cal"></div>
+          </div>
+          <div class="s-card">
+            <div class="s-row"><b>Weekly balance</b><span class="blue strong">−2,350 kcal</span></div>
+            <div class="bars" id="bars"></div>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="how wrap" id="how">
+    <h2 class="reveal">Set up in a minute.<br><span class="blue">Log in seconds.</span></h2>
+    <ol class="steps">
+      <li class="reveal"><span class="n">1</span><h3>Connect WHOOP</h3><p>Sign in on WHOOP's own page. Joul never sees your password.</p></li>
+      <li class="reveal"><span class="n">2</span><h3>Pick your goal</h3><p>Lose fat, maintain, or gain muscle. We suggest gentle defaults you can change.</p></li>
+      <li class="reveal"><span class="n">3</span><h3>Say what you ate</h3><p>Type “2 eggs, toast and an apple”. Foods, emoji and portions appear, ready to tweak.</p></li>
+      <li class="reveal"><span class="n">4</span><h3>See your Joul</h3><p>One number for the day, plus a calendar and weekly view of where you stand.</p></li>
+    </ol>
+  </section>
+
+  <section class="features" id="features">
+    <div class="wrap">
+      <h2 class="reveal">Everything you need.<br><span class="blue">Nothing you don't.</span></h2>
+      <div class="grid">
+        <article class="card reveal"><span class="ico">✍️</span><h3>Natural-language logging</h3><p>Describe a meal the way you'd text it. Joul splits it into foods with sensible portions.</p></article>
+        <article class="card reveal"><span class="ico">🍗</span><h3>Emoji for every food</h3><p>A curated food-to-emoji set makes your diary readable at a glance. Change any of them.</p></article>
+        <article class="card reveal"><span class="ico">📸</span><h3>Photo logging <i class="tag">Premium</i></h3><p>Snap a meal and review the estimated portions. Nothing is saved until you say so.</p></article>
+        <article class="card reveal"><span class="ico">🔥</span><h3>Calories burned, automatically</h3><p>Pulled from WHOOP, shown as today so far, then as a complete day once the cycle ends.</p></article>
+        <article class="card reveal"><span class="ico">🗓️</span><h3>A calendar that tells the story</h3><p>Deficit, surplus or incomplete at a glance. Days you haven't confirmed are never counted as a deficit.</p></article>
+        <article class="card reveal"><span class="ico">💪</span><h3>Protein, front and centre</h3><p>A simple progress bar toward your target, with carbs and fat when you want them.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="honest wrap">
+    <h2 class="reveal">Honest about the maths.</h2>
+    <p class="reveal">WHOOP measures physiological cycles, not midnight to midnight, so Joul labels today as provisional and marks every balance as an estimate. We never assume zero calories burned, and we never treat an empty diary as a perfect day. Joul is not medical advice.</p>
+  </section>
+
+  <section class="pricing wrap" id="pricing">
+    <h2 class="reveal">Free to start.<br><span class="blue">Premium when you want more.</span></h2>
+    <div class="plans">
+      <article class="plan reveal">
+        <h3>Free</h3>
+        <p class="price">$0</p>
+        <ul>
+          <li>Connect WHOOP and see calories burned</li>
+          <li>Daily estimated balance</li>
+          <li>Manual logging with emoji and editable portions</li>
+          <li>Protein tracking</li>
+          <li>7 days of history and charts</li>
+          <li>3 saved meals</li>
+          <li>3 photo analyses to try</li>
+        </ul>
+      </article>
+      <article class="plan featured reveal">
+        <span class="badge">Premium</span>
+        <h3>Joul Premium</h3>
+        <p class="price">$4.99 <small>/ month</small></p>
+        <p class="price-alt">or $29.99 / year</p>
+        <ul>
+          <li>Everything in Free</li>
+          <li>Photo logging, with fair use</li>
+          <li>Unlimited history and analytics</li>
+          <li>Unlimited saved meals</li>
+          <li>Advanced charts and macro targets</li>
+          <li>Nutrition and WHOOP insights, as they launch</li>
+        </ul>
+      </article>
+    </div>
+    <p class="fine center">Prices shown are planned launch prices and may change.</p>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <img src="assets/logo-black.png" alt="Joul" class="cta-logo">
+      <h2>Be first in line.</h2>
+      <p>Joul is coming to iPhone. Tell us you're interested and we'll write when it's ready.</p>
+      <a class="btn btn-light" href="mailto:hq@joul.health?subject=Joul%20waitlist">Join the waitlist</a>
+    </div>
+  </section>
+
+  <section class="faq wrap" id="faq">
+    <h2 class="reveal">Questions</h2>
+    <details><summary>Do I need a WHOOP?</summary><p>Yes. Joul's calories-burned number comes from WHOOP, so a WHOOP membership and the WHOOP app are required for the core experience.</p></details>
+    <details><summary>Is Joul on Android?</summary><p>Not at the moment. Joul is being built for iPhone first.</p></details>
+    <details><summary>How accurate are the numbers?</summary><p>They're estimates. WHOOP's energy expenditure is an estimate, and so are portion sizes and nutrition values. Joul shows the balance as an estimate, labels provisional days, and lets you edit everything.</p></details>
+    <details><summary>Is this medical advice?</summary><p>No. Joul is a tracking tool. Talk to a qualified professional about your health, diet and goals.</p></details>
+    <details><summary>What happens to my data?</summary><p>You connect WHOOP through WHOOP's own sign-in. You can disconnect at any time and delete your data from inside the app. Full details will be in our privacy policy before launch.</p></details>
+    <details><summary>Is Joul affiliated with WHOOP?</summary><p>No. Joul is an independent app that works with WHOOP data you choose to share. It isn't endorsed by or affiliated with WHOOP.</p></details>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap foot">
+    <div>
+      <img src="assets/logo-black.png" alt="Joul" class="logo logo-light">
+      <p class="fine">Nutrition, in balance.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="mailto:hq@joul.health">hq@joul.health</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+  <p class="legal wrap">Joul is an independent app and is not endorsed by or affiliated with WHOOP. WHOOP is a trademark of its owner. Calorie and nutrition values are estimates, not medical advice. © 2026 Joul.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
