@@ -57,7 +57,7 @@ h3{font-size:1.2rem;font-weight:800}
 /* phones */
 .showcase{padding:0 0 clamp(70px,10vw,130px);overflow:hidden}
 .phones{display:flex;justify-content:center;align-items:flex-end;gap:clamp(14px,3vw,40px)}
-.phone{margin:0;width:clamp(170px,26vw,300px);aspect-ratio:9/19;background:#0b0b14;border-radius:38px;padding:9px;box-shadow:0 40px 80px -30px rgba(31,59,255,.35),0 0 0 1px rgba(0,0,0,.2) inset}
+.phone-unused{margin:0;width:clamp(170px,26vw,300px);aspect-ratio:9/19;background:#0b0b14;border-radius:38px;padding:9px;box-shadow:0 40px 80px -30px rgba(31,59,255,.35),0 0 0 1px rgba(0,0,0,.2) inset}
 .phone .screen{height:100%;background:var(--bg);border-radius:30px;padding:16px 12px;overflow:hidden;display:flex;flex-direction:column;gap:8px;font-size:clamp(.5rem,1.15vw,.78rem)}
 .p1{transform:translateY(0)}.p2{transform:translateY(-34px)}.p3{transform:translateY(0)}
 @media(max-width:700px){.p3{display:none}.p2{transform:none}}
@@ -181,3 +181,13 @@ details p{margin:12px 0 0;color:var(--mute);font-weight:600}
 .doc th{font-weight:800}
 
 .eyebrow{display:inline-block;margin:0 0 22px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.38);font-weight:800;font-size:clamp(.85rem,2vw,1rem);letter-spacing:.01em;backdrop-filter:blur(6px)}
+
+/* real iPhone frames around real screenshots */
+.iphone{position:relative;margin:0;width:clamp(170px,26vw,300px);aspect-ratio:1206/2622;padding:clamp(5px,.9vw,10px);border-radius:clamp(30px,5.2vw,54px);
+  background:linear-gradient(145deg,#3a3c42,#15161a 45%,#2b2d33);
+  box-shadow:0 0 0 1.5px #5a5d66 inset,0 0 0 clamp(1px,.2vw,2px) #0b0b0e,0 40px 80px -28px rgba(31,59,255,.45),0 18px 40px -20px rgba(0,0,0,.5)}
+.iphone img{display:block;width:100%;height:100%;object-fit:cover;border-radius:clamp(25px,4.3vw,44px);background:#fff}
+.iphone::before,.iphone::after{content:"";position:absolute;width:3px;background:#2a2c31;border-radius:2px}
+.iphone::before{left:-3px;top:18%;height:7%;box-shadow:0 clamp(24px,5vw,52px) 0 #2a2c31,0 clamp(54px,10vw,104px) 0 #2a2c31}
+.iphone::after{right:-3px;top:27%;height:12%}
+.shots-note{margin-top:28px}
