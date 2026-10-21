@@ -24,7 +24,7 @@
     <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
   </nav>
-  <a class="btn btn-small" href="mailto:hq@joul.health?subject=Joul%20waitlist">Join the waitlist</a>
+  <a class="btn btn-small" href="#waitlist">Join the waitlist</a>
 </header>
 
 <main>
@@ -41,7 +41,7 @@
       <h1 id="hero-title">Know what you burn.<br>Know what you eat.</h1>
       <p class="lede">Joul connects to WHOOP, logs your food in seconds, and shows whether today is a deficit or a surplus. No clutter. No database to wrestle.</p>
       <div class="cta-row">
-        <a class="btn btn-light" href="mailto:hq@joul.health?subject=Joul%20waitlist">Join the waitlist</a>
+        <a class="btn btn-light" href="#waitlist">Join the waitlist</a>
         <a class="btn btn-ghost" href="#how">See how it works</a>
       </div>
       <p class="fine">iPhone · Works with WHOOP · Early access</p>
@@ -149,7 +149,17 @@
       <img src="assets/logo-black.png" alt="Joul" class="cta-logo">
       <h2>Be first in line.</h2>
       <p>Joul now connects to WHOOP for real. Early access is limited to a small group while we finish testing. Tell us you're interested and we'll write when there's room.</p>
-      <a class="btn btn-light" href="mailto:hq@joul.health?subject=Joul%20waitlist">Join the waitlist</a>
+      <div id="waitlist" class="anchor"></div>
+      <form class="waitlist" id="waitlist-form" method="post" action="#waitlist" onsubmit="return false" novalidate>
+        <div class="field"><label for="wl-name">Name</label><input id="wl-name" name="name" type="text" autocomplete="name" maxlength="80" required></div>
+        <div class="field"><label for="wl-email">Email</label><input id="wl-email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+        <div class="field"><label for="wl-wa">WhatsApp number</label><input id="wl-wa" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="+52 55 1234 5678" maxlength="32" required><small>Include your country code.</small></div>
+        <div class="hp" aria-hidden="true"><label>Leave this empty <input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+        <label class="consent"><input type="checkbox" name="consent" required><span>I agree that Joul may contact me by email and WhatsApp about launch and early access. I can opt out at any time. <a href="privacy.html#waitlist">How we use this</a>.</span></label>
+        <button class="btn btn-light" type="submit">Join the waitlist</button>
+        <p class="form-status" id="waitlist-status" role="status" aria-live="polite"></p>
+        <noscript><p class="form-status error">This form needs JavaScript. You can also email hq@joul.health.</p></noscript>
+      </form>
     </div>
   </section>
 
@@ -179,6 +189,6 @@
   <p class="legal wrap">Joul is an independent app and is not endorsed by or affiliated with WHOOP. WHOOP is a trademark of its owner. Calorie and nutrition values are estimates, not medical advice. © 2026 Joul.</p>
 </footer>
 
-<script src="main.js"></script>
+<script src="main.js?v=2"></script>
 </body>
 </html>

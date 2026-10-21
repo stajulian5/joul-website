@@ -195,3 +195,22 @@ details p{margin:12px 0 0;color:var(--mute);font-weight:600}
 .data-by{display:flex;align-items:center;justify-content:center;gap:8px;margin:20px 0 0}
 .data-by span{font-size:.62rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
 .data-by img{display:block;width:110px;height:auto}
+
+/* Waitlist form */
+.anchor{position:relative;top:-90px}
+.waitlist{max-width:440px;margin:0 auto;text-align:left;display:grid;gap:14px}
+.waitlist .field{display:grid;gap:6px}
+.waitlist label{font-weight:800;font-size:.9rem}
+.waitlist input[type=text],.waitlist input[type=email],.waitlist input[type=tel]{width:100%;padding:14px 16px;border-radius:14px;border:2px solid transparent;background:#fff;color:var(--ink);font:inherit;font-weight:600}
+.waitlist input:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.waitlist small{color:rgba(255,255,255,.8);font-weight:600}
+.waitlist .consent{display:flex;gap:10px;align-items:flex-start;font-weight:600;font-size:.85rem;line-height:1.4;color:rgba(255,255,255,.92)}
+.waitlist .consent input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:#fff}
+.waitlist .consent a{color:#fff}
+.waitlist .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.waitlist .btn{width:100%;margin-top:4px}
+.waitlist .btn[disabled]{opacity:.7;cursor:progress}
+.form-status{margin:0;min-height:1.4em;font-weight:700;text-align:center}
+.form-status.error{color:#ffd7d7}
+.waitlist.done .field,.waitlist.done .consent,.waitlist.done .btn{display:none}
+.waitlist .field.invalid input{border-color:#ffb3b3}

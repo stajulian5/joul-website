@@ -30,3 +30,40 @@
     const p = v.play?.(); if (p?.catch) p.catch(() => {});
   }
 })();
+
+// Waitlist form -> Joul API. Nothing is stored in the browser.
+(function () {
+  const form = document.getElementById('waitlist-form');
+  if (!form) return;
+  const status = document.getElementById('waitlist-status');
+  const btn = form.querySelector('button[type=submit]');
+  const API = 'https://api.joul.health/waitlist';
+  const say = (msg, isError) => { status.textContent = msg; status.classList.toggle('error', !!isError); };
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    form.querySelectorAll('.field').forEach(f => f.classList.remove('invalid'));
+    const d = Object.fromEntries(new FormData(form));
+    const name = (d.name || '').trim(), email = (d.email || '').trim(), whatsapp = (d.whatsapp || '').trim();
+    const waDigits = whatsapp.replace(/[\s().-]/g, '');
+    const bad = [];
+    if (!name) bad.push('wl-name');
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) bad.push('wl-email');
+    if (!/^\+[1-9]\d{7,14}$/.test(waDigits)) bad.push('wl-wa');
+    if (bad.length) {
+      bad.forEach(id => document.getElementById(id).closest('.field').classList.add('invalid'));
+      return say(bad.includes('wl-wa') && bad.length === 1 ? 'Add your WhatsApp number with country code, like +52 55 1234 5678.' : 'Please check the highlighted fields.', true);
+    }
+    if (!form.consent.checked) return say('Please tick the box so we can contact you.', true);
+    btn.disabled = true; say('Sending…');
+    try {
+      const res = await fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, whatsapp, consent: true, website: d.website || '' }) });
+      if (res.status === 201) { form.classList.add('done'); say("You're on the list. We'll write when there's room."); return; }
+      if (res.status === 429) return say('Too many tries. Please wait a few minutes and try again.', true);
+      const body = await res.json().catch(() => ({}));
+      say(body.message || 'Something went wrong. Please try again.', true);
+    } catch {
+      say("Couldn't reach the server. Please try again, or email hq@joul.health.", true);
+    } finally { btn.disabled = false; }
+  });
+})();
