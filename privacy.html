@@ -14,7 +14,7 @@
 <main class="doc">
 
 <h1>Privacy Policy</h1>
-<p class="meta">Last updated: October 20, 2026 · Version 0.2 (draft)</p>
+<p class="meta">Last updated: October 21, 2026 · Version 0.3 (draft)</p>
 <div class="draft"><b>Draft, not legal advice.</b> This page describes how Joul is designed to work. It has not yet been reviewed by a lawyer, which should happen before launch, and any statement here that doesn't match the shipped app must be corrected.</div>
 
 <p>Joul helps you compare the calories you eat with the calories WHOOP estimates you burn. Your food and body data are sensitive, so this policy explains plainly what we collect, why, who else touches it, and how you stay in control.</p>
@@ -32,7 +32,9 @@
 <tr><td>WHOOP connection: an access and refresh token that let us read your data until you disconnect</td><td>WHOOP, when you connect</td><td>Our server, encrypted. Never on your device.</td></tr>
 <tr><td>Session token that identifies your device to our server</td><td>Us</td><td>Your device's Keychain, plus a hash on our server</td></tr>
 <tr><td>Waitlist sign-up: your name, email address, WhatsApp number, and the time you agreed to be contacted</td><td>You, on the website</td><td>Our server database (see &ldquo;Waitlist&rdquo; below)</td></tr>
-<tr><td>Subscription status</td><td>Apple (StoreKit)</td><td>Handled by Apple. We don't receive your payment details.</td></tr>
+<tr><td>Subscription and free days: when your free days or subscription end, the subscription product, and Apple's original transaction ID</td><td>Us and Apple (StoreKit)</td><td>Our server database. Apple handles payment and any free trial; we never receive your card or payment details.</td></tr>
+<tr><td>Invites and campaign: your invite code, who invited you, the calendar dates (never what you ate) on which you logged any food, and the free days you earned</td><td>You, and the app</td><td>Our server database</td></tr>
+<tr><td>Campaign screenshot, only if you upload one to earn free days</td><td>You</td><td>Checked when you upload it (see section 5). Our server keeps only a fingerprint (hash) of the image so it can't be reused, not the image.</td></tr>
 <tr><td>Technical logs: IP address, request time, error codes</td><td>Your device</td><td>Our server logs. Our server logs, kept for 30 days.</td></tr>
 </table>
 <p>We do not collect your WHOOP password. You sign in on WHOOP's own page.</p>
@@ -59,6 +61,7 @@
 <h2>5. AI photo analysis</h2>
 <p>Photo logging is part of the subscription (and the free trial). When you use it, the photo is sent from the app to our server and on to our AI provider, Anthropic, PBC, which returns a list of foods and estimated portions. We send only the photo and the instructions needed to analyse it, not your name, profile or WHOOP data. Our server does not keep your photo or the result after the analysis is returned. If you choose to keep a photo with a meal, it is stored only on your device, as part of your diary. How our AI provider handles API data is governed by its own terms and privacy policy, which we review before relying on it.</p>
 <p><b>Typed food estimates.</b> If you ask Joul to estimate a food you typed that is not in our built-in list, the words you typed are sent from the app to our server and on to the same AI provider to return foods, portions and nutrition. We send only those words, not your name, profile or WHOOP data, and our server does not keep them after the answer is returned.</p>
+<p><b>Campaign screenshots.</b> If you take part in our sharing campaign and upload a screenshot of your post, the image is sent from the app to our server and on to the same AI provider, which tells us whether it shows a social post with food photos and a tag of Joul. The screenshot can show your social account name and other things on your screen, so crop it if you prefer. We send only the image, not your name, profile or WHOOP data, and our server does not keep it after the check; it keeps a one-way fingerprint of the image to stop the same screenshot earning days twice.</p>
 <p>AI results are estimates and can be wrong. You review and edit every result before anything is saved.</p>
 
 <h2>6. Who else handles your data</h2>
@@ -76,7 +79,7 @@
 <h2>8. Keeping and deleting data</h2>
 <ul>
 <li>Your food diary, any meal photos you keep, and your profile live on your device. Deleting an entry removes its photo, and deleting all data in the app, or deleting the app, removes everything from the device.</li>
-<li>Deleting all data in the app also asks our server to revoke WHOOP access and delete your account records (tokens and sessions).</li>
+<li>Deleting all data in the app also asks our server to revoke WHOOP access and delete your account records (tokens, sessions, subscription status, invite and free-day records, and screenshot fingerprints).</li>
 <li>Server logs are kept for 30 days.</li>
 <li>If we add cloud sync later, we will update this section first.</li>
 </ul>
@@ -109,14 +112,14 @@
 <p>Julian Stastny, an individual, with address at Av. Amsterdam 255, Hipódromo, Cuauhtémoc, 06100 Ciudad de México, CDMX, Mexico. Contact: <a href="mailto:hq@joul.health">hq@joul.health</a>.</p>
 
 <h3>Datos personales (personal data we process)</h3>
-<p>The data listed in section 2: profile and goals, food diary, optional meal photos, WHOOP data, your connection and session records, and technical logs. To use the app we do not ask for your name, phone number, financial data or government identifiers. If you join the waitlist on our website, we process your name, email address and WhatsApp number as described in section 2.</p>
+<p>The data listed in section 2: profile and goals, food diary, optional meal photos, WHOOP data, your connection and session records, subscription status, invite and free-day records, and technical logs. To use the app we do not ask for your name, phone number, financial data or government identifiers. If you join the waitlist on our website, we process your name, email address and WhatsApp number as described in section 2.</p>
 
 <h3>Datos personales sensibles (sensitive personal data)</h3>
 <p>Weight, height, date of birth, nutrition records and WHOOP energy and activity data are health-related and are treated as <b>sensitive personal data</b>. We process them only with your express consent. You give it when you enter them in Joul and when you connect WHOOP, and you can withdraw it at any time by disconnecting WHOOP, deleting your data in the app, or writing to us.</p>
 
 <h3>Finalidades (purposes)</h3>
 <ul>
-<li><b>Necessary purposes:</b> to provide the service you request (calorie balance, calendar, charts), to connect to WHOOP, to analyse meal photos when you ask, to manage subscriptions through Apple, and for security, abuse prevention and legal compliance.</li>
+<li><b>Necessary purposes:</b> to provide the service you request (calorie balance, calendar, charts), to connect to WHOOP, to analyse meal photos and campaign screenshots when you ask, to manage subscriptions through Apple, and for security, abuse prevention and legal compliance.</li>
 <li><b>Waitlist purpose:</b> to contact you about Joul&rsquo;s launch and early access, which you agree to when you submit the form. You can refuse or withdraw at any time by writing to us.</li>
 <li><b>Secondary purposes:</b> none at present. If we ever add any, we will tell you first and give you a way to refuse that does not affect the necessary purposes.</li>
 </ul>
