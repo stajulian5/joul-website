@@ -238,3 +238,14 @@ section[id],.anchor{scroll-margin-top:84px}
 .note.l{max-width:108px}
 
 .note.wide{max-width:122px}
+
+/* App Store style button (pre-launch): opens the waitlist */
+.cta-row{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap}
+.store{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 20px 0 16px;border-radius:12px;background:#000;color:#fff;text-decoration:none;border:1px solid #3a3a3d;transition:transform .15s ease,background .15s ease}
+.store:hover{transform:translateY(-1px);background:#1b1b1d}
+.store svg{width:24px;height:24px;fill:none;stroke:#fff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.store span{display:grid;line-height:1.05;text-align:left}
+.store small{font-size:.68rem;font-weight:500;opacity:.85}
+.store b{font-size:1.28rem;font-weight:600;letter-spacing:-.01em}
+.store-sm{height:46px;margin-top:14px}
+.store-sm b{font-size:1.08rem}
