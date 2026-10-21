@@ -238,6 +238,14 @@ section[id],.anchor{scroll-margin-top:84px}
 .note.l{max-width:108px}
 
 .note.wide{max-width:122px}
+.note.r .arr.plus{left:-66px;top:24%}
+/* leave room beside the phone so a note never touches or runs past the edge of its panel */
+@media(min-width:1100px){
+  .shot:has(.note.r){margin-right:64px}
+  .shot:has(.note.l){margin-left:64px}
+  .note.r{left:calc(100% + 26px)}
+  .note.l{right:calc(100% + 26px)}
+}
 
 /* App Store style button (pre-launch): opens the waitlist */
 .cta-row{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap}
