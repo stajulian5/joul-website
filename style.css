@@ -271,3 +271,9 @@ section[id],.anchor{scroll-margin-top:84px}
 .included li{position:relative;padding-left:26px;color:var(--mute);font-size:.95rem}
 .included li::before{content:"";position:absolute;left:0;top:.45em;width:14px;height:8px;border-left:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:rotate(-45deg) scale(.9)}
 @media(max-width:720px){.plans{grid-template-columns:1fr}.included ul{grid-template-columns:1fr}}
+
+/* combined paid plan: two prices in one box */
+.plan .tier{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 0 4px;margin-top:14px;border-top:1px solid var(--line)}
+.plan .tier .price{font-size:2rem;margin:0}
+.badge-inline{position:static;flex:none}
+.plan.featured ul{margin-top:18px}
