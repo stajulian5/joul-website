@@ -7,12 +7,15 @@
   }, { threshold: 0.12 });
   els.forEach(e => io.observe(e));
 
-  // If the hero video can't play (missing file, data saver), hide it so the gradient shows.
-  const v = document.getElementById('heroVideo');
-  if (v) {
+  // Videos: hide one that can't play so the gradient shows, and pause the ones scrolled out of view.
+  const vids = document.querySelectorAll('.reel video');
+  vids.forEach(v => {
     v.addEventListener('error', () => v.remove(), true);
     v.querySelector('source')?.addEventListener('error', () => v.remove());
-    const p = v.play?.(); if (p?.catch) p.catch(() => {});
+  });
+  if ('IntersectionObserver' in window) {
+    const vo = new IntersectionObserver(es => es.forEach(e => { const p = e.isIntersecting ? e.target.play?.() : e.target.pause?.(); if (p?.catch) p.catch(() => {}); }), { threshold: 0.1 });
+    vids.forEach(v => vo.observe(v));
   }
 })();
 

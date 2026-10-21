@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -42,12 +42,19 @@
     <p class="micro">iPhone · Works with WHOOP · Early access</p>
   </section>
 
-  <section class="wrap">
-    <div class="stage" aria-hidden="true">
-      <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
+  <section class="reel wrap" aria-label="Burn it, then eat it">
+    <figure class="reel-card reel-run">
+      <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true">
         <source src="assets/hero.mp4" type="video/mp4">
       </video>
-    </div>
+      <figcaption><span class="tagline">Know what you burn.</span><span class="sub">Your WHOOP already counts it.</span></figcaption>
+    </figure>
+    <figure class="reel-card reel-cook">
+      <video autoplay muted loop playsinline preload="metadata" poster="assets/cooking-veg-poster.jpg" aria-hidden="true">
+        <source src="assets/cooking-veg.mp4" type="video/mp4">
+      </video>
+      <figcaption><span class="tagline">Know what you eat.</span><span class="sub">Joul counts it in seconds.</span></figcaption>
+    </figure>
   </section>
 
   <section class="features wrap" id="features" aria-label="What Joul does">
@@ -201,9 +208,9 @@
       <a href="terms.html">Terms</a>
     </nav>
   </div>
-  <p class="legal wrap">Joul is an independent app and is not endorsed by or affiliated with WHOOP. WHOOP is a trademark of its owner. Calorie and nutrition values are estimates, not medical advice. © 2026 Joul.</p>
+  <p class="legal wrap">Joul is an independent app and is not endorsed by or affiliated with WHOOP. WHOOP is a trademark of its owner. Calorie and nutrition values are estimates, not medical advice. © 2026 Joul. Stock video via <a href="https://www.pexels.com/video/cooking-meat-in-a-pan-854216/" rel="noopener">Pexels</a> (cooking clip by Ela Haney).</p>
 </footer>
 
-<script src="main.js?v=3"></script>
+<script src="main.js?v=4"></script>
 </body>
 </html>
