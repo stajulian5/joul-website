@@ -188,7 +188,6 @@ details a{color:var(--blue)}
 .doc ul{padding-left:1.2rem}
 .doc li{margin:4px 0}
 .doc .meta{color:var(--mute);margin:0 0 22px}
-.doc .draft{background:#FFF4D6;border:1px solid #F0D58A;border-radius:14px;padding:14px 18px;margin:0 0 26px;font-weight:500;color:#5a4300}
 .doc mark{background:#FFE69A;color:#3a2c00;border-radius:4px;padding:0 4px;font-weight:600}
 .doc a{color:var(--blue)}
 .doc table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.95rem}
