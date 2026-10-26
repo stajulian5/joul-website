@@ -5,7 +5,19 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:'Geist',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+body{margin:0;font-family:'Geist',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:
+  radial-gradient(ellipse 65% 55% at 18% 4%, rgba(31,59,255,.38), transparent 62%),
+  radial-gradient(ellipse 60% 50% at 86% 3%, rgba(100,140,255,.34), transparent 62%),
+  radial-gradient(ellipse 70% 55% at 80% 40%, rgba(31,59,255,.24), transparent 65%),
+  radial-gradient(ellipse 65% 50% at 10% 46%, rgba(90,130,255,.22), transparent 65%),
+  radial-gradient(ellipse 70% 55% at 80% 74%, rgba(31,59,255,.24), transparent 65%),
+  radial-gradient(ellipse 60% 50% at 10% 80%, rgba(90,130,255,.2), transparent 65%),
+  radial-gradient(ellipse 65% 55% at 85% 98%, rgba(31,59,255,.3), transparent 62%),
+  radial-gradient(ellipse 55% 45% at 8% 97%, rgba(100,140,255,.24), transparent 62%),
+  var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased;position:relative}
+body::before{content:"";position:fixed;inset:0;z-index:2;pointer-events:none;mix-blend-mode:overlay;opacity:.28;
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='300'%20height='300'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.75'%20numOctaves='3'%20seed='11'%20stitchTiles='stitch'%20result='t'/%3E%3CfeColorMatrix%20in='t'%20type='matrix'%20values='0.333%200.333%200.333%200%200%200.333%200.333%200.333%200%200%200.333%200.333%200.333%200%200%200%200%200%200%201'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url%28%23n%29'/%3E%3C/svg%3E");
+  background-repeat:repeat}
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{width:min(var(--maxw),calc(100% - 40px));margin-inline:auto}
@@ -168,7 +180,7 @@ details a{color:var(--blue)}
 .waitlist .field.invalid input{border-color:#e5484d}
 
 /* footer */
-.footer{border-top:1px solid var(--line);padding:40px 0 30px;background:var(--bg)}
+.footer{border-top:1px solid var(--line);padding:40px 0 30px;background:transparent}
 .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
 .foot nav{display:flex;gap:22px;font-weight:500;font-size:.92rem}
 .foot nav a{text-decoration:none;color:var(--mute)}.foot nav a:hover{color:var(--ink)}
