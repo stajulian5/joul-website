@@ -159,25 +159,6 @@ details a{color:var(--blue)}
 .cta-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:36px;padding:clamp(32px,6vw,72px) clamp(20px,5vw,60px);text-align:center;box-shadow:0 30px 70px -40px rgba(31,59,255,.35)}
 .cta-card h2{font-size:clamp(2.2rem,5.4vw,3.8rem)}
 .cta-sub{max-width:520px;margin:16px auto 30px;color:var(--mute)}
-.anchor{position:absolute;top:-120px}
-
-/* waitlist form */
-.waitlist{max-width:440px;margin:0 auto;text-align:left;display:grid;gap:14px}
-.waitlist .field{display:grid;gap:6px}
-.waitlist label{font-weight:600;font-size:.88rem}
-.waitlist input[type=text],.waitlist input[type=email],.waitlist input[type=tel]{width:100%;padding:13px 15px;border-radius:14px;border:1px solid var(--line);background:#fff;color:var(--ink);font:inherit;font-weight:500}
-.waitlist input:focus-visible{outline:2px solid var(--blue);outline-offset:1px;border-color:transparent}
-.waitlist small{color:var(--faint);font-weight:500}
-.waitlist .consent{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:.84rem;line-height:1.45;color:var(--mute)}
-.waitlist .consent input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--ink)}
-.waitlist .consent a{color:var(--blue)}
-.waitlist .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.waitlist .pill{width:100%;margin-top:4px}
-.waitlist .pill[disabled]{opacity:.7;cursor:progress}
-.form-status{margin:0;min-height:1.4em;font-weight:600;text-align:center;color:var(--ink)}
-.form-status.error{color:#c1121f}
-.waitlist.done .field,.waitlist.done .consent,.waitlist.done .pill{display:none}
-.waitlist .field.invalid input{border-color:#e5484d}
 
 /* footer */
 .footer{border-top:1px solid var(--line);padding:40px 0 30px;background:transparent}
@@ -206,7 +187,7 @@ details a{color:var(--blue)}
 .doc th,.doc td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 .doc th{font-weight:600}
 
-section[id],.anchor{scroll-margin-top:84px}
+section[id]{scroll-margin-top:84px}
 
 /* handwritten notes: a short comment and a hand-drawn arrow pointing at one detail of the screen */
 .cta-wrap{position:relative;display:inline-block}
